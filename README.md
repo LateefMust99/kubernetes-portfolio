@@ -1,5 +1,5 @@
 # kubernetes-portfolio
-# Kubernetes Portfolio - Alex Obi
+# Kubernetes Portfolio
 
 A collection of production-grade Kubernetes configurations built during hands-on training.
 
