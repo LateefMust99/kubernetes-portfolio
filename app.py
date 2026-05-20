@@ -15,4 +15,4 @@ def shutdown(*_):
     print("shutting down gracefully", flush=True)
     sys.exit(0)
 
-signal.signal(signal.SIGTERM, shutdown)
+signal.signal(signal.SIGTERM, shutdown)# test
