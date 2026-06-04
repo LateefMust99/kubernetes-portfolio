@@ -1,0 +1,10 @@
+=== probe 1: host -> 18080 (uses -p mapping) ===
+ok
+(host -> 18080 OK)
+
+=== probe 2: container -> api:8080 (DNS, container port) ===
+ok
+(container -> 8080 OK)
+
+=== probe 3: container -> api:18080 (should fail) ===
+(port 18080 from container failed -- as expected)

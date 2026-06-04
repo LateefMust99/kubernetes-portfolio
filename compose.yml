@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: cohort
+      POSTGRES_PASSWORD: cohort
+      POSTGRES_DB: cohort
+    volumes:
+      - cohort-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cohort"]
+      interval: 5s
+      retries: 5
+    networks:
+      - cohort-net
+
+  api:
+    image: cohort-api:0.1.0
+    environment:
+      DB_HOST: db
+    ports:
+      - "18080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - cohort-net
+
+networks:
+  cohort-net:
+
+volumes:
+  cohort-db-data:
+    external: true
