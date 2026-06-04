@@ -1,4 +1,0 @@
-=== stranger probe (cohort-other) ===
---- ping db ---
-ping: db: Name does not resolve
---- dig db ---

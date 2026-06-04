@@ -1,6 +1,0 @@
-=== POST ===
-{"body":"hello from user-defined bridge","id":1}
-
-=== GET ===
-[{"body":"hello from user-defined bridge","id":1}]
-
