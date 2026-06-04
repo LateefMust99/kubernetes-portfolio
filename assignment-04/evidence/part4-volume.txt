@@ -1,0 +1,24 @@
+=== 4.2 add named volume ===
+db
+cohort-db-data
+--- volume inspect ---
+[
+    {
+        "CreatedAt": "2026-06-04T15:18:07Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/cohort-db-data/_data",
+        "Name": "cohort-db-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+--- start db with volume ---
+fe5a69b672a1cc0f34956ad775856f4a65b7e23adb18f2da924db5266333d0c4
+api
+--- POST a protected note ---
+{"body":"this note IS protected","id":1}
+
+--- GET ---
+[{"body":"this note IS protected","id":1}]
+

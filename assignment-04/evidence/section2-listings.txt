@@ -1,0 +1,34 @@
+=== docker network ls ===
+NETWORK ID     NAME                       DRIVER    SCOPE
+a5555dc4aefc   assignment-04_cohort-net   bridge    local
+78e35d6dafef   bridge                     bridge    local
+4eac3ef548a0   conquer-proj_default       bridge    local
+52a892b4c0c3   host                       host      local
+2c16d343ad4c   k3d-greeter                bridge    local
+15be2866fff8   none                       null      local
+
+=== docker network inspect assignment-04_cohort-net IPAM ===
+[
+  {
+    "Subnet": "172.20.0.0/16",
+    "Gateway": "172.20.0.1"
+  }
+]
+
+=== docker volume ls (filtered) ===
+DRIVER    VOLUME NAME
+local     cohort-db-data
+local     cohort-demo
+
+=== docker volume inspect cohort-db-data ===
+[
+    {
+        "CreatedAt": "2026-06-04T15:18:07Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/cohort-db-data/_data",
+        "Name": "cohort-db-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]

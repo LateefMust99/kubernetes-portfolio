@@ -1,0 +1,11 @@
+=== Part 5 backup ===
+--- bring db back so we have something to back up ---
+ae34c6b3d5ddbbdbb9075ac3ba9097381c3c19f27f46adf6d3d69a85895b5053
+--- verify data present ---
+api
+[{"body":"this note IS protected","id":1}]
+
+--- stop db, tar the volume ---
+db
+-rw-r--r--  1 lateefmust  staff   6.4M Jun  4 11:19 /Users/lateefmust/assignment-04/cohort-db-data-20260604.tar.gz
+db
